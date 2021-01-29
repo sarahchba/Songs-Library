@@ -14,7 +14,7 @@ public class jdbc {
 	
 	
 	private Connection conn() {
-		String url="jdbc:sqlite:C:\\Users\\sarah\\Documents\\EECE 332\\assignments\\6\\Chinook_Sqlite.sqlite";
+		String url="jdbc:sqlite:C:\\Users\..\Chinook_Sqlite.sqlite";
 		Connection conn=null;
 		try {
 			conn=DriverManager.getConnection(url);
