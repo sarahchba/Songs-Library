@@ -24,7 +24,7 @@ public class jdbc {
 			return conn;
 	}
 	
-		
+	//Display information about all the tables in the database	
 	private void printColumnNames() {			
 	try {
 		DatabaseMetaData dbMetaData = this.conn().getMetaData();
@@ -42,7 +42,7 @@ public class jdbc {
 		}}catch (SQLException e) {
 				e.printStackTrace();}	
 	}
-	
+	//Find all the Blues songs by Eric Clapton
 	private void EricClaptonBluesSongs() {
 		try{
 			String sql="SELECT Track.Name FROM Track,Genre,Artist,Album WHERE Artist.Name='Eric Clapton' "
@@ -61,7 +61,7 @@ public class jdbc {
 		}catch (SQLException e) {
 			e.printStackTrace();}
 	}
-	
+	//Find all the genres sung by Amy Winehouse
 	private void AmyWinehouseGenres() {
 		try {
 			String sql="SELECT	DISTINCT Genre.Name From Genre,Artist,Track,Album WHERE Artist.Name='Amy Winehouse' " 
@@ -76,7 +76,7 @@ public class jdbc {
 		}catch (SQLException e) {
 			e.printStackTrace();}
 	}
-	
+	//Find all the songs starting with “The”
 	private void SongsStartingWithThe() {
 		try {
 			System.out.println();
@@ -90,7 +90,7 @@ public class jdbc {
 		}catch (SQLException e) {
 			e.printStackTrace();}
 	}
-	
+	//Create a table Ticket
 	private void CreateTicketTable() {
 		try {
 			String sql="CREATE TABLE IF NOT EXISTS Ticket (\n"
@@ -111,7 +111,7 @@ public class jdbc {
 		}catch (SQLException e) {
 			e.printStackTrace();}
 	}
-	
+	//Populate the Ticket table
 	private void PopulateTicketTable() {
 		try {
 			Connection conn=this.conn();
